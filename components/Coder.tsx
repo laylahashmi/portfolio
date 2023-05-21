@@ -10,8 +10,8 @@ type Props = {}
 export default function Coder({}: Props) {
     const [text, count] = useTypewriter({
         words: [
-            "Hi! The name's Layla Hashmi :)",
-            "Girl-who-loves-coffee.tsx",
+            "Hi! Layla Hashmi here :)",
+            "Girl-who-loves-Coffee.tsx",
             "<ButLovesToCodeMore />"],
             loop: true,
             delaySpeed: 2000
