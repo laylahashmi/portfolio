@@ -2,21 +2,19 @@ import Image from 'next/image'
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import Header from '@/components/Header'
-
-const inter = Inter({ subsets: ['latin'] })
+import Coder from '@/components/Coder'
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-[rgb(36,36,36)] text-white h-screen">
       <Head>
         <title>Layla's Portfolio</title>
       </Head>
 
       <Header />
-
-      {/* Hero */}
-      <section id="codequeen">
-        <CodeQueen />
+      {/* Coder */}
+      <section>
+        <Coder />
       </section>
       {/* About */}
 
