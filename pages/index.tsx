@@ -17,12 +17,14 @@ export default function Home() {
       <section id="coder" className="snap-start">
         <Coder />
       </section>
-      {/* About */}
+
       <section id="about" className="snap-center">
         <About />
       </section>
       {/* Experiences */}
-
+      <section>
+        <WorkExperience />
+      </section>
       {/* Skills */}
 
       {/* Projects */}
