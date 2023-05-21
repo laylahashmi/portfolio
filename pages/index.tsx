@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import Header from '@/components/Header'
 import Coder from '@/components/Coder'
+import About from '@/components/About'
 
 export default function Home() {
   return (
@@ -12,12 +13,14 @@ export default function Home() {
       </Head>
 
       <Header />
-      {/* Coder */}
-      <section id="coder" className="snap-center">
+
+      <section id="coder" className="snap-start">
         <Coder />
       </section>
       {/* About */}
-
+      <section id="about" className="snap-center">
+        <About />
+      </section>
       {/* Experiences */}
 
       {/* Skills */}
