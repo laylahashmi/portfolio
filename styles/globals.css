@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .coderButton {
+        @apply px-6 py-2 border border-[#242424]
+        rounded-full uppercase text-xs tracking-widest
+        text-gray-500 transition-all hover:border-[#22a4ef]/40
+        hover:text-[#22a4ef]/40
+    }
+}
