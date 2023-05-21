@@ -15,7 +15,9 @@ export default function Home() {
       <Header />
 
       {/* Hero */}
-
+      <section id="codequeen">
+        <CodeQueen />
+      </section>
       {/* About */}
 
       {/* Experiences */}
