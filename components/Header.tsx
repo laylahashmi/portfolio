@@ -65,7 +65,7 @@ export default function Header({}: Props) {
             <p
             className="uppercase hidden md:inline-flex text-sm text-gray-400">
                 Get in Touch
-                </p>
+            </p>
         </motion.div>
     </header>
   )
