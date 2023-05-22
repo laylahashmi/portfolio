@@ -6,6 +6,8 @@ import WorkExperience from '@/components/WorkExperience'
 import Skills from '@/components/Skills'
 import Projects from '@/components/Projects'
 import ContactMe from '@/components/ContactMe'
+import Link from 'next/link'
+import { HomeIcon } from '@heroicons/react/24/solid'
 
 export default function Home() {
   return (
@@ -26,6 +28,10 @@ export default function Home() {
         <About />
       </section>
 
+      <section id="experience" className="snap-center">
+        <WorkExperience />
+      </section>
+
       <section id="skills" className="snap-start">
         <Skills />
       </section>
@@ -34,13 +40,18 @@ export default function Home() {
         <Projects />
       </section>
 
-      <section id="experience" className="snap-center">
-        <WorkExperience />
-      </section>
-
       <section id="contact" className="snap-start">
         <ContactMe />
       </section>
+
+      <Link href="#coder">
+        <footer className="sticky bottom-5 w-full cursor-pointer">
+          <div className="flex items-center justify-center">
+            <HomeIcon className="text-[#22a4ef] h-8 w-8 filter grayscale hover:grayscale-0" />
+          </div>
+        </footer>
+      </Link>
     </div>
+
   )
 }
