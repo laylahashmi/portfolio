@@ -1,10 +1,9 @@
-import Image from 'next/image'
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
 import Header from '@/components/Header'
 import Coder from '@/components/Coder'
 import About from '@/components/About'
 import WorkExperience from '@/components/WorkExperience'
+import Skills from '@/components/Skills'
 
 export default function Home() {
   return (
@@ -22,12 +21,14 @@ export default function Home() {
       <section id="about" className="snap-center">
         <About />
       </section>
-      {/* Experiences */}
+
       <section id="experience" className="snap-center">
         <WorkExperience />
       </section>
-      {/* Skills */}
 
+      <section id="skills" className="snap-start">
+        <Skills />
+      </section>
       {/* Projects */}
 
       {/* Contact Me */}
