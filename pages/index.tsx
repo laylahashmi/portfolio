@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import Header from '@/components/Header'
 import Coder from '@/components/Coder'
 import About from '@/components/About'
+import WorkExperience from '@/components/WorkExperience'
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
         <About />
       </section>
       {/* Experiences */}
-      <section>
+      <section id="experience" className="snap-center">
         <WorkExperience />
       </section>
       {/* Skills */}
