@@ -11,7 +11,7 @@ const query = groq`
 `;
 
 type Data = {
-    projects: Project[]
+    projects: Project[];
 };
 
 export default async function handler(

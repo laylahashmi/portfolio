@@ -11,7 +11,7 @@ const query = groq`
 `;
 
 type Data = {
-    experiences: Experience[]
+    experiences: Experience[];
 };
 
 export default async function handler(

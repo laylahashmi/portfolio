@@ -5,10 +5,10 @@ import { Social } from "@/typings";
 
 const query = groq`
     *[_type == "social"]
-`
+`;
 
 type Data = {
-    socials: Social[]
+    socials: Social[];
 };
 
 export default async function handler(
