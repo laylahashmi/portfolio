@@ -1,16 +1,20 @@
-import React from 'react'
-import { Cursor, useTypewriter } from 'react-simple-typewriter'
-import BackgroundCircles from './BackgroundCircles'
-import Image from 'next/image'
-import me from '/public/me.jpeg'
-import Link from 'next/link'
+import React from 'react';
+import { Cursor, useTypewriter } from 'react-simple-typewriter';
+import BackgroundCircles from './BackgroundCircles';
+import Image from 'next/image';
+import me from '/public/me.jpeg';
+import Link from 'next/link';
+import { PageInfo } from '../typings'
 
-type Props = {}
 
-export default function Coder({}: Props) {
+type Props = {
+    pageInfo: PageInfo[];
+};
+
+export default function Coder({ pageInfo }: Props) {
     const [text, count] = useTypewriter({
         words: [
-            "Hi! Layla Hashmi here :)",
+            `Hi! ${pageInfo?.name} here :)`,
             "Girl-who-loves-Coffee.tsx",
             "<ButLovesToCodeMore />"],
             loop: true,
@@ -27,7 +31,9 @@ export default function Coder({}: Props) {
             width="400"
         />
         <div className="z-20">
-            <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[9px]">FullStack Software Engineer</h2>
+            <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[9px]">
+                {pageInfo?.role}
+            </h2>
             <h1 className="text-4xl lg:text-5xl font-semibold px-10">
                 <span className="mr-3">{text}</span>
                 <Cursor cursorColor="#22a4ef"/>
@@ -50,4 +56,4 @@ export default function Coder({}: Props) {
         </div>
     </div>
   )
-}
+};

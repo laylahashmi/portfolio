@@ -1,11 +1,14 @@
-import React from 'react'
-import meAgain from '/public/meAgain.jpeg'
-import { motion } from 'framer-motion'
-import Image from 'next/image'
+import React from 'react';
+import meAgain from '/public/meAgain.jpeg';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { PageInfo } from '../typings';
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo[];
+};
 
-export default function About({}: Props) {
+export default function About({ pageInfo }: Props) {
   return (
     <div
     className="flex flex-col relative h-screen text-center md:text-left
@@ -34,18 +37,7 @@ export default function About({}: Props) {
                 background:
             </h4>
             <p className="text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vivamus commodo a massa in luctus. Nam eget magna est.
-                Aliquam non sapien sagittis mauris vestibulum tristique.
-                Curabitur blandit ac diam vitae convallis. Proin et est
-                enim.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vivamus commodo a massa in luctus. Nam eget magna est.
-                Aliquam non sapien sagittis mauris vestibulum tristique.
-                Curabitur blandit ac diam vitae convallis. Proin et est
-                enim.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vivamus commodo a massa in luctus. Nam eget magna est.
-                Aliquam non sapien sagittis mauris vestibulum tristique.
-                Curabitur blandit ac diam vitae convallis. Proin et est enim.
+            {pageInfo?.backgroundInformation}
             </p>
         </motion.div>
     </div>
