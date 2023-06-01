@@ -2,11 +2,14 @@ import React from 'react'
 import robinhoodLogo from '/public/robinhoodLogo.png'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { Project } from '@/typings'
+import { urlFor } from '@/sanity'
 
-type Props = {}
+type Props = {
+    projects: Project[];
+}
 
-export default function Projects({}: Props) {
-    const projects= [1, 2, 3, 4, 5]
+export default function Projects({ projects }: Props) {
   return (
     <motion.div
     initial={{opacity: 0}}
@@ -24,23 +27,33 @@ export default function Projects({}: Props) {
                 <div key="project" className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5
                 items-center justify-evenly p-20 md:p-44 h-screen">
                     <Image
-                        src={robinhoodLogo}
+                        src={urlFor(project?.image).url()}
                         alt=""
+                        height="100"
+                        width="400"
                     />
 
                     <div className="space-y-10 px-0 md:px-10 max-w-6xl">
                         <h4 className="text-3xl text-semibold text-center">
                             <span className="underline decoration-[#22a4ef]/50">
-                                Case Study {i + 1} of {projects.length}:</span>{" "} Robinhood Clone
+                                Case Study {i + 1} of {projects.length}:</span>{" "}
+                                {project?.title}
                         </h4>
 
-                        <p className="text-lg text-center md:text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Vivamus commodo a massa in luctus. Nam eget magna est.
-                            Aliquam non sapien sagittis mauris vestibulum tristique.
-                            Curabitur blandit ac diam vitae convallis. Proin et est
-                            enim.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Vivamus commodo a massa in luctus. Nam eget magna est.
-                            Aliquam non sapien sagittis mauris vestibulum tristique.</p>
+                        <div className="flex items-center space-x-2 justify-center">
+                        {project?.technologies.map((technology) => (
+                            <Image
+                            className="h-10 w-10"
+                            key={technology._id}
+                            src={urlFor(technology.image).url()}
+                            alt=""
+                            height="100"
+                            width="400"
+                            />
+                        ))}
+                        </div>
+
+                        <p className="text-lg text-center md:text-left">{project.summary}</p>
                     </div>
                 </div>
             ))}
