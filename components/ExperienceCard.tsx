@@ -32,8 +32,10 @@ function ExperienceCard({ experience }: Props) {
                 {experience.technologies.map((technology) => (
                     <Image
                     key={technology._id}
-                    className="h-10 w-10 rounded-full"
-                    src={robinhoodLogo}
+                    className="h-10 w-14 rounded-full"
+                    src={urlFor(technology?.image).url()}
+                    height="100"
+                    width="400"
                     alt=""/>
                 ))}
             </div>

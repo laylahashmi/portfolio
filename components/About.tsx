@@ -3,9 +3,10 @@ import meAgain from '/public/meAgain.jpeg';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { PageInfo } from '../typings';
+import { urlFor } from '@/sanity';
 
 type Props = {
-    pageInfo: PageInfo[];
+    pageInfo: PageInfo;
 };
 
 export default function About({ pageInfo }: Props) {
@@ -23,7 +24,9 @@ export default function About({ pageInfo }: Props) {
             <Image
                 className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full
                 object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[450px] xl:h-[550px]"
-                src={meAgain}
+                src={urlFor(pageInfo?.profilePic).url()}
+                height="100"
+                width="400"
                 alt="A pic of adventurous Layla sitting on her fav possession: a 2017 Jeep Wrangler."/>
         </motion.div>
         <motion.div

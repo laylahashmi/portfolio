@@ -5,10 +5,11 @@ import Image from 'next/image';
 import me from '/public/me.jpeg';
 import Link from 'next/link';
 import { PageInfo } from '../typings'
+import { urlFor } from '@/sanity';
 
 
 type Props = {
-    pageInfo: PageInfo[];
+    pageInfo: PageInfo;
 };
 
 export default function Coder({ pageInfo }: Props) {
@@ -24,8 +25,8 @@ export default function Coder({ pageInfo }: Props) {
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
         <BackgroundCircles />
         <Image
-        className="relative rounded-full h-32 w-32 mx-auto object-cover"
-            src={me}
+            className="relative rounded-full h-32 w-32 mx-auto object-cover"
+            src={urlFor(pageInfo?.coderImage).url()}
             alt="An awesome coder gal who everyone should hire"
             height="100"
             width="400"
