@@ -24,7 +24,7 @@ export default async function handler(
     to: myemail,
     subject: `Message from ${name}`,
     text: `${message} | Sent from: ${email}`,
-    html: `<div>${message}</div><p>Sent from: ${email}</p>`,
+    html: `<div>Hi Layla,</div><h3>${message}</h3><p>Sent from: ${email}</p>`,
 };
 
   await new Promise((resolve, reject) => {

@@ -16,7 +16,6 @@ export default function ContactMe() {
     const {
         register,
         handleSubmit,
-        formState: { errors },
     } = useForm({
         defaultValues: {
             name: "",
@@ -40,8 +39,17 @@ export default function ContactMe() {
             const body = await res.json();
 
             if (res.ok) {
-                alert(`${body.message} 🚀`)
+                alert(`${body.message} 🚀`);
+                setisLoading(false);
             }
+
+            if (res.status === 400) {
+                alert(`$body.message} 😢`);
+                setisLoading(false);
+            }
+        } catch (err) {
+            console.log('Something went wrong: ', err);
+            setisLoading(false);
         }
     };
 
@@ -83,7 +91,10 @@ export default function ContactMe() {
 
                 <textarea required id="message" {...register('message')} placeholder="Message" className="contactInput" />
 
-                <button type="submit" className="bg-[#22a4ef] py-5 px-10 rounded-md text-black font-bold text-lg">Submit</button>
+                <button type="submit"
+                className="bg-[#22a4ef] py-5 px-10 rounded-md text-black font-bold text-lg">
+                    {isLoading ? 'Loading...' : 'Submit'}
+                </button>
             </form>
         </div>
     </div>
