@@ -6,13 +6,13 @@
     .coderButton {
         @apply px-6 py-2 border border-[#242424]
         rounded-full uppercase text-xs tracking-widest
-        text-gray-500 transition-all hover:border-[#22a4ef]/40
-        hover:text-[#22a4ef]/40
+        text-gray-400 transition-all hover:border-[#22a4ef]
+        hover:text-[#22a4ef]
     }
 
     .contactInput {
         @apply outline-none bg-slate-400/10 rounded-sm border-b px-6
-        py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all
-        focus:border-[#22a4ef]/40 focus:text-[#22a4ef]/40 hover:border-[#22a4ef]/40
+        py-4 border-[#242424] text-gray-400 placeholder-gray-400 transition-all
+        focus:border-[#22a4ef] focus:text-[#22a4ef] hover:border-[#22a4ef]
     }
 }

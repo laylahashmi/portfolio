@@ -32,7 +32,7 @@ export default function Coder({ pageInfo }: Props) {
             width="400"
         />
         <div className="z-20">
-            <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[9px]">
+            <h2 className="text-sm uppercase text-gray-400 pb-2 tracking-[9px]">
                 {pageInfo?.role}
             </h2>
             <h1 className="text-4xl lg:text-5xl font-semibold px-10">
@@ -40,7 +40,7 @@ export default function Coder({ pageInfo }: Props) {
                 <Cursor cursorColor="#22a4ef"/>
             </h1>
 
-            <div className="pt-5">
+            <div className="pt-5 ">
                 <Link href="#about">
                     <button className="coderButton">About</button>
                 </Link>

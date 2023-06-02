@@ -1,8 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
-import { useForm, SubmitHandler } from "react-hook-form";
-import { sendContactForm } from '../lib/api'
+import { useForm } from "react-hook-form"
 
 
 interface Props {
@@ -36,20 +35,18 @@ export default function ContactMe() {
                 body: JSON.stringify(data),
             });
 
-            const body = await res.json();
-
-            if (res.ok) {
-                alert(`${body.message} 🚀`);
-                setisLoading(false);
-            }
-
-            if (res.status === 400) {
-                alert(`$body.message} 😢`);
-                setisLoading(false);
-            }
-        } catch (err) {
-            console.log('Something went wrong: ', err);
+        const body = await res.json();
+        if (res.ok) {
+            alert(`${body.message} 🚀`);
             setisLoading(false);
+        }
+        if (res.status === 400) {
+            alert(`$body.message} 😢`);
+            setisLoading(false);
+        }
+        } catch (err) {
+        console.log('Something went wrong: ', err);
+        setisLoading(false);
         }
     };
 
