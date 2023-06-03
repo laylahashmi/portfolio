@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'portfolio',
 
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  projectId: 'gx60ahvb',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
