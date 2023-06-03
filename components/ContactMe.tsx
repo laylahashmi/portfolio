@@ -53,14 +53,14 @@ export default function ContactMe() {
   return (
     <div className="h-screen relative text-center flex flex-col md:text-left md:flex-row px-10 max-w-7xl
     justify-evenly mx-auto items-center">
-        <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+        <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-400 text-2xl">
             Contact
         </h3>
 
         <div className="flex flex-col space-y-10">
             <h4 className="text-4xl font-semibold text-center">
                 Liking what you see so far?{" "}
-                <span className="underline decoration-[#22a4ef]/50">{" "}Let's talk.</span>
+                <span className="underline decoration-[#22a4ef]/60">{" "}Let{"'"}s talk.</span>
             </h4>
 
             <div className="space-y-10">

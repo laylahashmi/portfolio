@@ -30,7 +30,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
     overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#22a4ef]/80
     ">
       <Head>
-        <title>Layla's Portfolio</title>
+        <title>Layla{"'"}s Portfolio</title>
       </Head>
 
       <Header socials={socials} />
@@ -43,16 +43,16 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <About pageInfo={pageInfo} />
       </section>
 
-      <section id="experience" className="snap-center">
-        <WorkExperience experiences={experiences} />
+      <section id="projects" className="snap-start">
+        <Projects projects={projects} />
       </section>
 
       <section id="skills" className="snap-start">
         <Skills skills={skills} />
       </section>
 
-      <section id="projects" className="snap-start">
-        <Projects projects={projects} />
+      <section id="experience" className="snap-center">
+        <WorkExperience experiences={experiences} />
       </section>
 
       <section id="contact" className="snap-start">

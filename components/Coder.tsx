@@ -44,14 +44,14 @@ export default function Coder({ pageInfo }: Props) {
                 <Link href="#about">
                     <button className="coderButton">About</button>
                 </Link>
-                <Link href="#experience">
-                    <button className="coderButton">Experience</button>
+                <Link href="#projects">
+                    <button className="coderButton">Projects</button>
                 </Link>
                 <Link href="#skills">
                     <button className="coderButton">Skills</button>
                 </Link>
-                <Link href="#projects">
-                    <button className="coderButton">Projects</button>
+                <Link href="#experience">
+                    <button className="coderButton">Experience</button>
                 </Link>
             </div>
         </div>

@@ -1,7 +1,7 @@
 // import { mailOptions, transporter } from "../../config/nodemailer";
 
 import type { NextApiRequest, NextApiResponse } from 'next';
-import nodemailer from 'nodemailer';
+import * as nodemailer from 'nodemailer'
 
 const myemail = process.env.EMAIL;
 const pass = process.env.EMAIL_PASS;

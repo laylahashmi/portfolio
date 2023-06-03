@@ -12,8 +12,8 @@ type Props = {
 function ExperienceCard({ experience }: Props) {
   return (
     <article className="flex flex-col rounded-lg items-center space-y-7
-    flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center p-10 bg-[#1d1c1c]
-    hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200">
+    flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center p-10 bg-[#373434]
+    hover:opacity-100 opacity-50 cursor-pointer transition-opacity duration-200">
         <motion.div
         initial={{y: -100, opacity: 0}}
         whileInView={{y: 0, opacity: 1}}

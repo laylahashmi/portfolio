@@ -14,7 +14,7 @@ export default function About({ pageInfo }: Props) {
     <div
     className="flex flex-col relative h-screen text-center md:text-left
     md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center overflow-hidden">
-        <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+        <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-400 text-2xl">
         About
         </h3>
         <motion.div
@@ -22,11 +22,11 @@ export default function About({ pageInfo }: Props) {
             transition={{duration: 1.2}}
             whileInView={{ opacity:1, x: 0 }}>
             <Image
-                className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full
-                object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[450px] xl:h-[550px]"
+                className="-mb-20 md:mb-0 flex-shrink-0 w-48 h-48 rounded-full
+                object-cover md:rounded-lg md:w-96 md:h-96 xl:w-[450px] xl:h-[550px]"
                 src={urlFor(pageInfo?.profilePic).url()}
-                height="100"
-                width="400"
+                height="200"
+                width="800"
                 alt="A pic of adventurous Layla sitting on her fav possession: a 2017 Jeep Wrangler."/>
         </motion.div>
         <motion.div
@@ -34,12 +34,12 @@ export default function About({ pageInfo }: Props) {
         whileInView={{opacity: 1}}
         transition={{duration: 1.5}}
         className="space-y-10 px-0 md:px-10 max-w-2xl">
-            <h4 className="text-4xl font-semibold">
+            <h4 className="lg:text-4xl font-semibold md:text-2xl sm:text-sm">
                 Here is a{" "}
                 <span className="underline decoration-[#22a4ef]/50">little</span>{" "}
                 background:
             </h4>
-            <p className="text-base">
+            <p className="lg:text-lg md:text-base sm:text-sm">
             {pageInfo?.backgroundInformation}
             </p>
         </motion.div>
