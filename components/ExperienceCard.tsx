@@ -21,13 +21,14 @@ function ExperienceCard({ experience }: Props) {
         viewport={{once: true}}>
             <Image
             className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
-            src={robinhoodLogo}
+            src={urlFor(experience.companyImage).url()}
             alt=""
+            width="400"
+            height="100"
             />
         </motion.div>
         <div className="px-0 md:px-10">
             <h4 className="text-4xl font-light">{experience.company}</h4>
-            <p className="font-bold text-2xl mt-1">Robinhood</p>
             <div className="flex space-x-2 my-2">
                 {experience.technologies.map((technology) => (
                     <Image

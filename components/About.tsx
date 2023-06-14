@@ -40,7 +40,13 @@ export default function About({ pageInfo }: Props) {
                 background:
             </h4>
             <p className="lg:text-lg md:text-base sm:text-sm">
-            {pageInfo?.backgroundInformation}
+            Coding is something I’ve been doing for the last 8-10 years, ever since my first high school computer science class. Even while pursuing other possibilities, I’ve always kept up with the newest technologies simply out of pure curiosity and interest in the field.
+            </p>
+            <p>
+            I'm passionate about many creative pursuits, including photography, art, design, and of course, coding. Additionally, I love a good challenge. This combination of interests is what ultimately led me to my current career in software engineering.
+            </p>
+            <p>
+            I love building for the web. From something as simple as a single HTML file – all the way to large React and Next.js applications. The web is incredible. I can become a developer, writer, creator or I can just build. It’s a place of literally endless possibilities and that’s what I love about it.
             </p>
         </motion.div>
     </div>

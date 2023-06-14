@@ -27,7 +27,7 @@ function Skill({ skill, directionLeft }: Props) {
             src={urlFor(skill?.image).url()}
             alt=""
             height="100"
-            width="400"
+            width="100"
             />
         </motion.div>
         <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300
