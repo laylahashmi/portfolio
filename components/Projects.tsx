@@ -17,8 +17,8 @@ export default function Projects({ projects }: Props) {
             Projects
         </h3>
 
-        <div className="relative w-full h-[60vh] md:h-[70vh] flex overflow-x-scroll overflow-y-auto snap-x snap-mandatory z-20
-        scrollbar">
+        <div className="relative w-full h-[62vh] md:h-[75vh] flex overflow-x-scroll overflow-y-auto snap-x snap-mandatory z-20
+        scrollbar-thin">
             {projects.map((project, i) => (
                 <div key="project" className="w-screen flex-shrink-0 snap-center flex flex-col
                  items-center overflow-y-auto space-y-24 px-10 md:space-y-10">
@@ -58,6 +58,16 @@ export default function Projects({ projects }: Props) {
                         </div>
 
                         <p className="lg:text-lg text-center md:text-left md:text-base ">{project.summary}</p>
+                        {/* <a href={project.linkToBuild}>Check it out!</a> */}
+                        <div className="flex flex-col md:flex-row items-center space-x-2
+                        justify-center px-10 md:text-base lg:text-lg">
+                            <span className="underline decoration-[#22a4ef]/50">
+                                    Tools Used:</span>{" "}
+                                {project?.technologies.map((technology) => (
+                                <div key="technology">
+                                    {technology.title}</div>
+                        ))}
+                        </div>
                     </div>
                 </div>
             ))}

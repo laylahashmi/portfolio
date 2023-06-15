@@ -28,25 +28,26 @@ function ExperienceCard({ experience }: Props) {
             />
         </motion.div>
         <div className="px-5 md:px-10">
-            <h4 className="text-4xl font-light">{experience.company}</h4>
-            <div className="flex space-x-2 my-2">
+            <h3 className="text-2xl md:text-4xl font-bold">{experience.jobTitle}</h3>
+            <h4 className="text-xl md:text-3xl font-light">{experience.company}</h4>
+            <div className="flex flex-wrap space-x-2 space-y-2 my-2">
                 {experience.technologies.map((technology) => (
                     <Image
                     key={technology._id}
-                    className="h-10 w-14 rounded-full"
+                    className="h-10 w-10 md:h-16 md:w-16 rounded-full"
                     src={urlFor(technology?.image).url()}
                     height="100"
                     width="400"
                     alt=""/>
                 ))}
             </div>
-            <p className="uppercase py-5 text-gray-300">
+            <p className="text-sm md:text-lg uppercase py-5 text-gray-300">
                 {new Date(experience.dateStarted).toDateString()} -
                 {experience.isCurrentlyWorkingHere? "Present"
                 : new Date(experience.dateEnded).toDateString()}
             </p>
-            <ul className="list-disc space-y-4 ml-5 text-lg h-96 overflow-x-scroll scrollbar-thin
-             scrollbar-track-gray-400/20 scrollbar-thumb-[#22a4ef]/80">
+            <ul className="list-disc space-y-4 ml-5 text-sm md:text-lg h-96 overflow-x-scroll scrollbar-thin
+             scrollbar-track-gray-400/20 scrollbar-thumb-[#22a4ef]/80 ">
                 {experience.points.map((point, i) => (
                     <li key={i}>{point}</li>
                 ))}

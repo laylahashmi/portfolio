@@ -16,8 +16,8 @@ export default function Coder({ pageInfo }: Props) {
     const [text, count] = useTypewriter({
         words: [
             `Hi! ${pageInfo?.name} here :)`,
-            "Girl-who-loves-Coffee.tsx",
-            "<ButLovesToCodeMore />"],
+            "Girl-who-loves-Coffee-and-Art/Design.tsx",
+            "<But Loves To Code More/>"],
             loop: true,
             delaySpeed: 2000
     })
@@ -53,6 +53,9 @@ export default function Coder({ pageInfo }: Props) {
                 <Link href="#experience">
                     <button className="coderButton">Experience</button>
                 </Link>
+                {/* <Link href="/public/Layla Hashmi Resume.pdf">
+                    <button className="coderButton">Resume</button>
+                </Link> */}
             </div>
         </div>
     </div>
