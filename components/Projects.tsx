@@ -11,41 +11,43 @@ type Props = {
 
 export default function Projects({ projects }: Props) {
   return (
-    <motion.div
-    initial={{opacity: 0}}
-    whileInView={{opacity: 1}}
-    transition={{duration: 1.5}}
-    className="h-screen relative flex flex-col overflow-hidden text-left md:flex-row max-w-full justify-evenly
-    mx-auto items-center z-0">
-        <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-400 text-2xl">
+    <div className="h-screen relative flex flex-col text-left max-w-full justify-evenly
+        mx-auto items-center z-0 md:space-y-10">
+        <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-400 text-2xl ">
             Projects
         </h3>
 
-        <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20
-        scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#22a4ef]/80">
+        <div className="relative w-full h-[60vh] md:h-[70vh] flex overflow-x-scroll overflow-y-auto snap-x snap-mandatory z-20
+        scrollbar">
             {projects.map((project, i) => (
-                <div key="project" className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5
-                items-center justify-evenly p-20 md:p-44 h-screen">
+                <div key="project" className="w-screen flex-shrink-0 snap-center flex flex-col
+                 items-center overflow-y-auto space-y-24 px-10 md:space-y-10">
+                    <motion.div
+                    initial={{opacity: 0, x: -100}}
+                    whileInView={{opacity: 1, x:0}}
+                    transition={{duration: 1}}
+                    viewport={{once:true}}>
                     <Image
-                        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full
-                        object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[450px] xl:h-[550px]"
+                        className="-mb-20 md:mb-0  w-80 h-64
+                        object-cover md:rounded-lg md:w-96 md:h-96 xl:w-[550px] xl:h-[300px] "
                         src={urlFor(project?.image).url()}
                         alt=""
                         height="100"
                         width="400"
                     />
+                    </motion.div>
 
                     <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-                        <h4 className="lg:text-3xl text-semibold text-center md:text-2xl">
+                        <h4 className="text-3xl text-semibold text-center ">
                             <span className="underline decoration-[#22a4ef]/50">
-                                Case Study {i + 1} of {projects.length}:</span>{" "}
+                                Project {i + 1} of {projects.length}:</span>{" "}
                                 {project?.title}
                         </h4>
 
                         <div className="flex items-center space-x-2 justify-center">
                         {project?.technologies.map((technology) => (
                             <Image
-                            className="h-10 w-10"
+                            className="h-7 w-7 md:h-10 md:w-10"
                             key={technology._id}
                             src={urlFor(technology.image).url()}
                             alt=""
@@ -55,13 +57,13 @@ export default function Projects({ projects }: Props) {
                         ))}
                         </div>
 
-                        <p className="lg:text-lg text-center md:text-left md:text-base sm:text-sm">{project.summary}</p>
+                        <p className="lg:text-lg text-center md:text-left md:text-base ">{project.summary}</p>
                     </div>
                 </div>
             ))}
         </div>
 
         <div className="w-full absolute top-[30%] bg-[#22a4ef]/10 left-0 h-[400px] -skew-y-12"/>
-    </motion.div>
+    </div>
   )
 }

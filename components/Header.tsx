@@ -26,7 +26,6 @@ export default function Header({ socials }: Props) {
             duration: 1.5
         }}
         className="flex flex-row items-center">
-            {/* Social Icons */}
         {socials.map((social) => (
             <SocialIcon
                 key={social._id}
@@ -60,7 +59,7 @@ export default function Header({ socials }: Props) {
                 />
                 <Link href="#contact">
                     <p
-                    className="cursor-pointer uppercase hidden md:inline-flex text-sm text-gray-400">
+                    className="cursor-pointer uppercase sm:inline-flex text-sm text-gray-400">
                         Get in Touch
                     </p>
                 </Link>

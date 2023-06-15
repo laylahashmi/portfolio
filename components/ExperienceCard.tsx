@@ -12,8 +12,8 @@ type Props = {
 function ExperienceCard({ experience }: Props) {
   return (
     <article className="flex flex-col rounded-lg items-center space-y-7
-    flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center p-10 bg-[#373434]
-    hover:opacity-100 opacity-50 cursor-pointer transition-opacity duration-200">
+    flex-shrink-0 h-[900px] md:w-[600px] md:h-[800px] xl:w-[900px] xl:h[1000px] snap-center p-10 bg-[#373434]
+    hover:opacity-100 opacity-50 cursor-pointer transition-opacity duration-200 w-screen">
         <motion.div
         initial={{y: -100, opacity: 0}}
         whileInView={{y: 0, opacity: 1}}
@@ -27,7 +27,7 @@ function ExperienceCard({ experience }: Props) {
             height="100"
             />
         </motion.div>
-        <div className="px-0 md:px-10">
+        <div className="px-5 md:px-10">
             <h4 className="text-4xl font-light">{experience.company}</h4>
             <div className="flex space-x-2 my-2">
                 {experience.technologies.map((technology) => (
@@ -45,8 +45,8 @@ function ExperienceCard({ experience }: Props) {
                 {experience.isCurrentlyWorkingHere? "Present"
                 : new Date(experience.dateEnded).toDateString()}
             </p>
-            <ul className="list-disc space-y-4 ml-5 text-lg h-96 overflow-y-scroll scrollbar-thin
-            scrollbar-track-black scrollbar-thumb-[#22a4ef]/80">
+            <ul className="list-disc space-y-4 ml-5 text-lg h-96 overflow-x-scroll scrollbar-thin
+             scrollbar-track-gray-400/20 scrollbar-thumb-[#22a4ef]/80">
                 {experience.points.map((point, i) => (
                     <li key={i}>{point}</li>
                 ))}

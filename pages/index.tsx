@@ -91,5 +91,5 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     }
   }
 
-  revalidate: 30;
+  revalidate: 20;
 };
