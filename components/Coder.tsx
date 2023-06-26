@@ -15,9 +15,11 @@ type Props = {
 export default function Coder({ pageInfo }: Props) {
     const [text, count] = useTypewriter({
         words: [
-            `Hi! ${pageInfo?.name} here :)`,
-            "Girl-who-loves-Coffee-and-Art/Design.tsx",
-            "<But Loves To Code More/>"],
+            `Hey I'm Layla :)`,
+            "Coder 💻",
+            "Artist 🎨",
+            "Book Worm 📖",
+            "Traveler 🧳"],
             loop: true,
             delaySpeed: 2000
     })

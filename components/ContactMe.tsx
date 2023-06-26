@@ -57,18 +57,13 @@ export default function ContactMe() {
             Contact
         </h3>
 
-        <div className="flex flex-col h-[65vh] space-y-10 overflow-y-scroll">
+        <div className="flex flex-col h-[65vh] space-y-10 overflow-y-auto">
             <h4 className="text-xl md:text-4xl font-semibold text-center">
                 Liking what you see so far?{" "}
                 <span className="underline decoration-[#22a4ef]/60">{" "}Let{"'"}s talk.</span>
             </h4>
 
             <div className="space-y-10">
-                <div className="flex items-center space-x-5 justify-center">
-                    <PhoneIcon className="text-[#22a4ef] h-7 w-7 animate-pulse"/>
-                    <p className=" text:lg md:text-2xl">+1 (346)-831-9036</p>
-                </div>
-
                 <div className="flex items-center space-x-5 justify-center">
                     <EnvelopeIcon className="text-[#22a4ef] h-7 w-7 animate-pulse"/>
                     <p className="text:lg md:text-2xl">laylawaseem@gmail.com</p>
